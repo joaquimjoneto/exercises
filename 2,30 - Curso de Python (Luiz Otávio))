@@ -1,0 +1,12 @@
+#Criar um Programa pra ler um número inteiro e dizer se é par, ímpar ou não inteiro.
+
+n = float(input('Digite um número inteiro: '))
+
+if n%2==0:
+    print(f'{n} é par')
+elif n%2==1:
+    print(f'{n} é ímpar')
+else:
+    print(f'{n} não é inteiro')
+    
+#obs: Não gosto de como esse programa foi feito. Deve existir uma maneira 'mais bonita', mas essa foi a que consegui encontrar no momento e ela serve ao propósito.
