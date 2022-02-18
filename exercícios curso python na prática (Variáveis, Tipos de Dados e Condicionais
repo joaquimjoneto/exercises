@@ -1,0 +1,183 @@
+#Q1 - Escreva um programa que mostre a mensagem 'Hello World' na tela
+
+print('Hello World')
+
+#Q2 - Faça um programa que solicite um número do usuário e apresente a seguinte mensagem na tela: "O número digitado foi [número]".
+
+n = int(input('Digite um número: '))
+print (f'O número digitado foi {n}')
+
+#Q3 - Escreva um programa que solicite o nome e o sobrenome do usuário. Ao final o programa deverá apresentar o nome completo do usuário na tela.
+
+nome = input('Digite seu nome: ')
+sobrenome = input('Digite seu sobrenome: ')
+
+print(f'Seu nome completo é: {nome} {sobrenome}')
+
+#Q4 - Faça um programa que solicite três números inteiros do usuário e imprima a soma destes. 
+
+a = int(input('Digite um número: '))
+b = int(input('Digite um número: '))
+c = int(input('Digite um número: '))
+
+print ('A soma dos números é igual a: {a+b+c}')
+
+#Q5 - Escreva um programa que solicite duas notas do usuário e apresente a média na tela da seguinte forma: "A média das notas [nota1] e [nota2] é [média]"
+
+a = int(input('Digite um número: '))
+b = int(input('Digite um número: '))
+
+print(f'A média dos números {a} e {b} é igual a: {(a+b)/2}')
+
+#Q6 - Faça um programa que calcule a raiz quadrada de um número. O usuário deve inserir um número e o programa deve mostrar na tela o resultado da raiz quadrada do número inserido.
+
+from math import sqrt
+
+n = float(input('Digite um número: '))
+
+print(f'A raiz quadrada de {n} é igual a: {sqrt(n)}')
+
+#Q7 - Faça um programa que peça 5 números de ponto flutuante do usuário e apresente no final a média dos números digitados.
+
+a = float(input('Digite um número: '))
+b = float(input('Digite um número: '))
+c = float(input('Digite um número: '))
+d = float(input('Digite um número: '))
+e = float(input('Digite um número: '))
+
+print(f'A média dos números digitados é igual a: {(a+b+c+d+e)/5}')
+
+#Q8 - Escreva um programa que faça a conversão de um dado valor de metro para quilômetro.
+
+a = float(input('Digite uma distância em metros: '))
+
+print(f'A distância em km é igual a: {a/1000}km')
+
+#Q9 - Escreva um programa que calcule a área de uma circunferência. O usuário deve digitar o valor do raio e ao final o programa deverá mostrar na tela a área da circunferência.
+
+#Dica: você pode usar a biblioteca math para pegar a constante pi.
+
+from math import pi
+
+r = float(input('Digite o valor do raio em metros: '))
+
+print(f'A área da circunferência é igual a:{(pi*r**2)/2}m²')
+
+#Q10 - Faça um programa que peça uma temperatura em Fahrenheit (F) e converta esta temperatura para grau Celsius (C), mostrando o resultado da conversão na tela.
+
+f = float(input('Digite uma temperatura em graus Fahrenheit: '))
+
+print(f'A temperatura {f}ºF equivale a {(5*f - 160)/9}ºC')
+
+#Q11 - Escreva um programa que peça dois números e apresente a divisão e multiplicação entre eles. A tela de apresentação deverá seguir o seguinte formato:
+#"[número1]x[número2]=[multiplicação]"
+#"[número1]/[número2]=[divisão]"
+
+a = float(input('Digite um número: '))
+b = float(input('Digite um número: '))
+
+print(f'{a}*{b} = {a*b}')
+print(f'{a}/{b} = {a/b}')
+
+#Q12 - Escreva um programa que receba o nome, sobrenome e idade do usuário e apresente a seguinte mensagem na tela:
+#"Seja bem-vindo [nome] [sobrenome]."
+#"Você possui [idade] anos de idade."
+
+nome = input('Digite o seu nome: ')
+sobrenome = input('Digite o seu sobrenome: ')
+idade = int(input('Digite a sua idade: '))
+
+print(f'Seja bem-vindo {nome} {sobrenome}')
+
+print(f'Você possui {idade} anos de idade')
+
+#Q13 - Escreva um programa que peça um número do usuário via método input e converta esse número para o formato float.
+
+numero = input('Digite um número: ')
+numero = float(numero)
+
+#Q14 - Escreva um programa que peça o nome e a idade do usuário. Caso a idade do usuário seja maior ou igual a 18 anos apresente a seguinte mensagem: "Seja bem-vindo ao nosso site [nome]!"; caso contrário, apresente a seguinte mensagem: "Você não pode acessar nosso site [nome]."
+
+nome = input('Digite o seu nome: ')
+idade = int(input('Digite a sua idade: '))
+
+if idade>=18:
+    print(f'Seja bem-vindo ao nosso site, {nome}')
+else:
+    print(f'Você não pode acessar o nosso site, {nome}')
+    
+#Q15 - Elabore um programa para calcular a hipotenusa de um triângulo.
+
+from math import sqrt
+
+a = float(input('Digite um cateto: '))
+b = float(input('Digite outro cateto: '))
+
+print(f'A hipotenusa do triângulo é igual a: {sqrt(a**2 + b**2)}')
+
+#Uma outra possível solução seria importando a função hypot da biblioteca math
+
+from math import hypot
+
+a = float(input('Digite um cateto: '))
+b = float(input('Digite outro cateto: '))
+
+print(f' O valor da hipotenusa é: {hypot(a, b)})
+
+#Q16 - Faça um programa que recebe um número inteiro do usuário e calcule o fatorial deste número.
+
+a = int(input('Digite um número inteiro: '))
+contador = a
+produto = 1
+
+while contador >0:
+    produto = produto*contador
+    contador -=1
+print (f'{a}! é igual a: {produto}')
+
+#Q17 - Escreva um programa que peça um número do usuário e calcule o logaritmo deste número nas bases 10 e 2.
+
+from math import log10, log2
+
+numero = int(input('Digite um número: '))
+
+print(f'O logaritmo de {numero} na base 10 é igual a: {log10(numero)}')
+print(f'O logaritmo de {numero} na base 2 é igual a: {log2(numero)}')
+
+#Q18 - Faça um programa que peça a base e a altura de um retângulo e calcule e mostre na tela a área e o perímetro
+
+base = int(input('Digite a base do retângulo: '))
+altura = int(input('Digite a altura do retângulo: '))
+
+print(f'A área do retângulo é igual a: {base*altura}')
+print(f'O perímetro do retângulo é igual a: {2*base + 2*altura}')
+
+#Q19 - Escreva um programa que solicite o nome, o sobrenome e o salário atual de um funcionário. Ao fim, calcule seu novo salário considerando cenários hipotéticos, com os seguintes aumentos: 10%, 25%,30% e 50%. A mensagem na tela deverá seguir o seguinte padrão:
+
+#"Olá, [nome] [sobrenome]"
+#"Seu salário atual é : [salário]"
+#"Seu salário com 10% de aumento é: [salário]"
+#"Seu salário com 25% de aumento é: [salário]"
+#"Seu salário com 30% de aumento é: [salário]"
+#"Seu salário com 50% de aumento é: [salário]"
+
+nome = input('Digite o seu nome: ')
+sobrenome = input('Digite o seu sobrenome: ')
+salario = float(input('Digite o seu salário: '))
+
+print(f'Olá, {nome} {sobrenome}.')
+print(f'O seu salário com 10% de aumento é: {salario*1.10}')
+print(f'O seu salário com 25% de aumento é: {salario*1.25}')
+print(f'O seu salário com 30% de aumento é: {salario*1.30}')
+print(f'O seu salário com 50% de aumento é: {salario*1.50}')
+
+#Q20 - Escreva um programa que peça um número inteiro do usuário e calcule e imprima a tabuada deste número
+
+n = int(input('Digite um número inteiro: '))
+
+contador = 1
+
+print(f'A tabuada de {n} é:')
+while contador <=10:
+    print(f'{n}*{contador} = {n*contador}')
+    contador +=1
