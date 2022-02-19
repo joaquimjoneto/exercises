@@ -1,0 +1,6 @@
+n = input('Digite um número: ')
+if n.isdigit():
+    n = float(n)
+    print('Número válido')
+else:
+    print('Número inválido')
