@@ -1,0 +1,11 @@
+#Check for Duplicates in the list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+
+my_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+dupl = []
+
+for c1 in range(0, len(my_list)):
+    for c2 in range(0, len(my_list)):
+        if my_list[c1] == my_list[c2] and c1 != c2:
+            dupl.append(my_list[c1])
+
+print(list(set(dupl)))
