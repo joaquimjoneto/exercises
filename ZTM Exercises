@@ -9,3 +9,15 @@ for c1 in range(0, len(my_list)):
             dupl.append(my_list[c1])
 
 print(list(set(dupl)))
+
+#Create a function that returns the highest even number in a lista
+
+def highest_even:
+    sorted_list = sorted(list) 
+    sorted_list.reverse()
+
+    for check in sorted_list:
+        if check % 2 == 0:
+        print (f'{check}')
+        break
+highest_even([1, 3, 5, 6, 7, 9]) 
