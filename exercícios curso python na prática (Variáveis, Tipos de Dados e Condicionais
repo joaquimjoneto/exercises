@@ -277,9 +277,48 @@ else:
     print('Todos os números são iguais')
     
 
+#Escreva um programa que peça números reais (float) do usuário indefinidamente . Caso os números digitados não estejam situados entre 0 e 10 o programa deverá ser finalizado, mostrando a soma e a quantidade de números digitados.
 
+counter = 0
 
+while True:
+    n = float(input('Digite um número: '))
+    counter += n
+    if n < 0 or n > 10:
+        print(f'A soma dos números é: {counter}')
+    else:
+        continue
+        
+#Escreva um programa que peça um número inteiro do usuário e mostre na tela o fatorial deste número.
 
+n = int(input('Digite um número: '))
+counter = 1
+for i in range(1, n+1):
+    counter = counter*i
+
+print(counter)
+
+#Escreva um programa que peça números inteiros positivos indefinidamente e armazene-os em uma lista. O programa deverá ser encerrado caso o número digitado seja negativo ou nulo. Ao final mostre na tela a quantidade números pares e ímpares. 
+
+even_list = []
+odd_list = []
+
+while True:
+    n = int(input('Digite um número: '))
+
+    if n <= 0:
+        break
+    elif n % 2 == 0:
+        even_list.append(n)
+        continue
+    elif n % 2 == 1:
+        odd_list.append(n)
+        continue
+
+print(total_list)
+
+print(f'Pares: {len(even_list)}')
+print(f'Ímpares: {len(odd_list)}')
 
 
 
