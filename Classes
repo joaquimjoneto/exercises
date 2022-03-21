@@ -1,0 +1,177 @@
+# 1 - Crie uma classe Pessoa com os seguintes atributos: nome, sobrenome e idade. 
+
+class Pessoa:
+    
+    def __init__(self, name, surname, age):
+        self.name = name
+        self.surname = surname
+        self.age = age
+        
+# 2 - Acrescente a classe Pessoa um método para mostrar os dados de uma pessoa. Crie um objeto do tipo Pessoa para testar suas propriedades e métodos.
+
+class Pessoa:
+    
+    def __init__(self, name, surname, age):
+        self.name = name
+        self.surname = surname
+        self.age = age
+    
+    def dados(self):
+        return print(f'{self.name} {self.surname}, {self.age} anos de idade')
+
+p1 = Pessoa('Joaquim', 'Oliveira', 31)
+
+p1.dados()
+
+
+# 3 - Crie uma classe Pessoa com as seguintes características:
+
+# Atributos:
+
+    # Nome (atributo público);
+
+    # E-mail (atributo público);
+
+    # Senha (atributo privado).
+
+# Métodos:
+
+    # Mostrar nome;
+
+    # Mostrar E-mail;
+
+    # Mostrar senha.
+
+
+# Crie um objeto da classe Pessoa para testar suas propriedades e métodos.
+
+
+class Pessoa:
+
+    def __init__(self, name, email, senha):
+        self.name = name
+        self.email = email
+        self._senha = senha
+
+    def show_name(self):
+        return print(f'{self.name}')
+
+    def show_email(self):
+        return print(f'{self.email}')
+
+    def show_senha(self):
+        return print(f'{self._senha}')
+
+p1 = Pessoa('Joaquim', 'joaquim@gmail.com', '154154')
+
+p1.show_name()
+p1.show_email()
+p1.show_senha()
+
+
+# 4 - Crie uma classe Produto com as seguintes características:
+
+# Atributos:
+
+    # Nome;
+
+    # Estoque;
+
+    # Descrição;
+
+    # Preço.
+
+# Métodos:
+
+    # Mostrar nome;
+
+    # Mostrar estoque;
+
+    # Mostrar preço;
+
+    # Mudar nome;
+
+    # Mudar estoque;
+
+    # Mudar descrição;
+
+    # Mudar preço;
+
+    # Sumário (mostrar na tela todos os atributos de instância).
+    
+    
+class Produto:
+
+    def __init__(self, nome, estoque, descricao, preco):
+        self.nome = nome
+        self.estoque = estoque
+        self.descricao = descricao
+        self.preco = preco
+
+    def show_nome(self):
+        return print(f'{self.nome}')
+
+    def show_estoque(self):
+        return print(f'{self.estoque}')
+
+    def show_preco(self):
+        return print(f'{self.preco}')
+
+    def change_name(self):
+        self.nome = input('Digite um nome: ')
+
+    def change_estoque(self):
+        self.estoque = input('Digite um valor: ')
+
+    def change_descricao(self):
+        self.descricao = input('Digite uma descrição: ')
+
+    def change_preco(self):
+        self.preco = input('Digite um preco: ')
+
+    def sumario(self):
+        return print (f'{self.nome}, {self.estoque}, {self.descricao}, {self.preco}')
+
+p1 = Produto('biscoito', 800, 'biscoito azul', 5)
+
+# 5 - Crie uma classe Lampada com os seguintes atributos e métodos:
+
+# Atributos:
+
+    # Cor;
+
+    # Voltagem;
+
+    # Luminosidade;
+
+    # Ligada (a lâmpada deve inicializar desligada).
+
+# Métodos:
+
+    # Verificar se a lâmpada está ligada/desligada
+
+    # Ligar/desligar a lâmpada.
+
+# Todos os atributos devem ser privados.
+
+# Crie um objeto da classe Lampada e teste os métodos criados.
+
+class Lamp:
+
+    def __init__(self, color, voltage, luminosity, is_on):
+        self._color = color
+        self._voltage = voltage
+        self._luminosity = luminosity
+        self._is_on = is_on
+
+    def on_or_off(self):
+        if self._is_on > 0:
+            return print("It's on")
+
+        if self._is_on < 0:
+            return print("It's off")
+
+    def on_off(self):
+        self._is_on = self._is_on * -1
+
+lamp1 = Lamp('White', '120V', 'Bright', -1)
